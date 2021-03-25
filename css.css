@@ -1,0 +1,49 @@
+body{
+    background-color:rgb(255, 163, 78);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+li{
+    list-style-type: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color:hotpink ;
+}
+center{
+    background-color:rgb(206, 145, 96);
+}
+#valid_f{
+    background-color:indianred;
+    padding:10px;
+    border:2px solid;
+    border-radius: 15px;
+}
+#valid_f:hover{
+    background-color:rgb(238, 132, 132);
+    padding:10px;
+    border:2px solid;
+    border-radius: 15px;
+}
+#valid_f:focus{
+    background-color:rgb(179, 49, 49);
+    padding:10px;
+    border:2px solid;
+    border-radius: 15px;
+}
+#replay{
+    background-color:mediumaquamarine;
+    padding:10px;
+    border:2px solid;
+    border-radius: 15px;
+}
+#replay:hover{
+    background-color:rgb(166, 246, 219);
+    padding:10px;
+    border:2px solid;
+    border-radius: 15px;
+}
+#replay:focus{
+    background-color:rgb(55, 155, 121);
+    padding:10px;
+    border:2px solid;
+    border-radius: 15px;
+}
