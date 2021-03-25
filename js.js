@@ -1,11 +1,20 @@
 // init
 f=[]
 f_entrer=[]
-// hide inimportant elements
+// masquer les éléments importants
 document.getElementById('div_f').hidden=true
 document.getElementById('replay').hidden=true
 // valide le nombre n
-document.getElementById('valid_n').addEventListener('click',n)
+document.getElementById('valid_n').addEventListener('click',vide)
+// valider l'entré n si vide ou non (il était un numbre)
+function vide(){
+    if(document.getElementById('n').value==''){
+        alert('Entrer le numbre de la suite fibonacci pour continuer')
+    }else{
+        n()
+    }
+}
+// Changer le style et créer un nouveau menu avec une entrée pour permettre à l'utilisateur de saisir les valeurs suivantes
 function n(){
     document.getElementById('n').style.backgroundColor='green'
     document.getElementById('valid_n').style.backgroundColor='green'
@@ -17,7 +26,7 @@ function n(){
         document.getElementById('ul').innerHTML+='<li>F'+i+' <input min="0" value="0" type="number" id="li'+i+'"></li>'
     }
 }
-// valide la suite
+// Vérifiez la suite dans laquelle nous stockons les valeurs saisies par l'utilisateur dans le menu "f_enter" et nous appelons la fonction 'calc' pour créer une nouvelle suite qui prend les trois premiers chiffres saisis par l'utilisateur pour créer une nouvelle suite et en suite fait appeler la fonction 'test' pour comparer les deux suite
 document.getElementById('valid_f').addEventListener('click',verif)
 function verif(){
     f_entrer=[]
@@ -28,7 +37,7 @@ function verif(){
     f_clc()
     test()
 }
-// Calculez la séquence de Fibonacci. Elle prend les trois premiers nombres saisis par l'utilisateur
+// Calculez la suite de Fibonacci. Elle prend les trois premiers nombres saisis par l'utilisateur
 function f_clc(){
     f0=f_entrer[0]
     f1=f_entrer[1]
@@ -41,7 +50,7 @@ function f_clc(){
         f.push(f[i-1]+f[i-2])
     }
 }
-// tester la suite comparer la suite génerer par le pc avec la suite génerer avec vous
+// Testez le suite et comparez le groupe généré par l'ordinateur avec celui créé avec vous
 function test(){
     t=true
     for(i=0;i<n;i++){
@@ -61,7 +70,7 @@ function test(){
         document.getElementById('msg').innerHTML='ERROR'
     }
 }
-// replay
+// Relancer la page pour rejouer le jeu
 document.getElementById('replay').addEventListener('click',replay)
 function replay(){
     window.location.reload();
