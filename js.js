@@ -28,7 +28,7 @@ function verif(){
     f_clc()
     test()
 }
-// culc la suite Suite Fibonacci elle prand les trois
+// Calculez la séquence de Fibonacci. Elle prend les trois premiers nombres saisis par l'utilisateur
 function f_clc(){
     f0=f_entrer[0]
     f1=f_entrer[1]
